@@ -45,6 +45,10 @@ Answer 1
 
 Answer 2
 
+## Rhysources
+[https://gitmoji.dev/](https://gitmoji.dev/)   
+[https://readme.so](https://readme.so)   
+[https://gitignore.io](https://www.toptal.com/developers/gitignore)
 
 ## Authors
 
