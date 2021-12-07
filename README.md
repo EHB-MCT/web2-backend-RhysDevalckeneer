@@ -6,23 +6,39 @@ Backend for the courseproject MovieTime by Rhys Devalckeneer
 #### Get all items
 
 ```
-  GET /api/items
+  GET /movies
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
+#### Post item
 
 ```
-  GET /api/items/${id}
+  POST /movie/{id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
+
+#### Put item 
+
+```
+  PUT /movie/{id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+#### Delete item
+
+```
+  DELETE /movie/{id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
 ## Tech Stack
 
@@ -33,7 +49,7 @@ Backend for the courseproject MovieTime by Rhys Devalckeneer
 **Server:** Node, Express, MongoDB  
 
 ## Frontend
-Frontend can be found [here]().  
+Frontend can be found [here](https://github.com/EHB-MCT/web2-frontend-RhysDevalckeneer).  
 
 ## FAQ
 
@@ -54,7 +70,8 @@ Answer 2
 
 - [@RhysDevalckeneer](https://github.com/RhysDevalckeneer)
 - [@RhysDevalckeneer2](https://github.com/RhysDevalckeneer2)
-- [@ecs0w](https://github.com/Ecsowdus)
+- [@ecs0w](https://github.com/Ecsowdus)   
+**NOTE:** All from me though
 
 ## Side note
 The developing of the project might be streamed on [Twitch](https://www.twitch.tv/ecs0w).   
