@@ -4,24 +4,19 @@ const cors = require('cors')
 const { MongoClient, ObjectId } = require('mongodb');
 require('dotenv').config()
 
-
-
 const client = new MongoClient(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const app = express();
-const port = 1337;
+const port = process.env.PORT || 1337;
 
 app.use(cors())
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-
 // basic route
 app.get('/', (req, res) => {
     res.status(300).redirect('/info.html');
 })
-
-
 
 // get all movies
 app.get('/movies', async ( req, res) => {
