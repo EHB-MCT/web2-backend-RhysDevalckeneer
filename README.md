@@ -68,9 +68,9 @@ Answer 2
 
 ## Authors
 
-- [@RhysDevalckeneer](https://github.com/RhysDevalckeneer)
-- [@RhysDevalckeneer2](https://github.com/RhysDevalckeneer2)
-- [@ecs0w](https://github.com/Ecsowdus)  
+[@RhysDevalckeneer](https://github.com/RhysDevalckeneer)
+[@RhysDevalckeneer2](https://github.com/RhysDevalckeneer2)
+[@ecs0w](https://github.com/Ecsowdus)  
    
 **NOTE:** All from [me](https://rhys.be/) though
 
