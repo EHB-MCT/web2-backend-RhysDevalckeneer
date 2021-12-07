@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const cors = require('cors')
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 require('dotenv').config()
 
 
@@ -9,7 +9,7 @@ require('dotenv').config()
 const client = new MongoClient(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const app = express();
-const port = process.env.PORT || 1337;
+const port = 1337;
 
 app.use(cors())
 app.use(express.static('public'));
@@ -47,7 +47,7 @@ app.get('/movies', async ( req, res) => {
 
 
 // get one movie
-app.get('/movies/:id', async (req,res) => {
+app.get('/movie/:id', async (req,res) => {
     
     //id is located in the query: req.query.id
     try{
@@ -57,7 +57,7 @@ app.get('/movies/:id', async (req,res) => {
         const collections= client.db('courseproject').collection('movies');
 
         //only look for a challenge with this ID
-        const query = { id: req.query.id };
+        const query = { _id: ObjectId(req.params.id) };
         console.log(query)
 
         const movie = await collections.findOne(query);
