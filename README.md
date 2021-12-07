@@ -5,7 +5,7 @@ Backend for the courseproject MovieTime by Rhys Devalckeneer
 
 #### Get all items
 
-```http
+```
   GET /api/items
 ```
 
@@ -15,7 +15,7 @@ Backend for the courseproject MovieTime by Rhys Devalckeneer
 
 #### Get item
 
-```http
+```
   GET /api/items/${id}
 ```
 
