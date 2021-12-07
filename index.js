@@ -47,7 +47,7 @@ app.get('/movies', async ( req, res) => {
 
 
 // get one movie
-app.get('/movie/:id', async (req,res) => {
+app.get('/movies/:id', async (req,res) => {
     
     //id is located in the query: req.query.id
     try{
