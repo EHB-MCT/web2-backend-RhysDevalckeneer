@@ -70,7 +70,8 @@ Answer 2
 
 - [@RhysDevalckeneer](https://github.com/RhysDevalckeneer)
 - [@RhysDevalckeneer2](https://github.com/RhysDevalckeneer2)
-- [@ecs0w](https://github.com/Ecsowdus)   
+- [@ecs0w](https://github.com/Ecsowdus)  
+   
 **NOTE:** All from me though
 
 ## Side note
