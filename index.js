@@ -79,7 +79,7 @@ app.get('/movie/:id', async (req,res) => {
 });
 
 // save a challenge
-app.post('/movie', async (req, res) => {
+app.post('/movies', async (req, res) => {
 
     try{
          //connect to the db
