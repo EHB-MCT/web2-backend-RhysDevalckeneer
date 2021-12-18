@@ -98,7 +98,7 @@ app.post('/movies', async (req, res) => {
         } 
          // Create the new Challenge object
         let newMovie = {
-            movie_id: req.body.movie_id,
+            movie_id: req.body.id,
         }
 
          // Insert into the database
@@ -110,15 +110,16 @@ app.post('/movies', async (req, res) => {
         return;
     }catch(error){
         console.log(error);
+        console.log(error.message);
         res.status(500).send({
             error: 'Something went wrong',
             value: error,
             
             test: 'this is where it happens'
         });
-        console.log(error.message);
     }finally {
         await client.close();
+        console.log('db closed')
     }
 });
 
