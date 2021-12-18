@@ -101,6 +101,7 @@ app.post('/movies', async (req, res) => {
 
          // Insert into the database
         let insertResult = await collection.insertOne(newMovie);
+        console.log(insertResult);
 
          //Send back successmessage
         res.status(201).json(newMovie);
@@ -109,7 +110,8 @@ app.post('/movies', async (req, res) => {
         console.log(error);
         res.status(500).send({
             error: 'Something went wrong',
-            value: error
+            value: error,
+            test: 'this is where it happens'
         });
     }finally {
         await client.close();
