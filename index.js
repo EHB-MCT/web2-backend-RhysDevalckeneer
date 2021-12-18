@@ -91,14 +91,14 @@ app.post('/movies', async (req, res) => {
         console.log(collection)
 
          // Validation for double challenges
-        const movie = await collection.findOne({movie_id: req.body.movie_id });
+        const movie = await collection.findOne({movie_id: req.body.movie_id});
         if(movie){
-            res.status(400).send(`Bad request: Movie already exists with name ${movie_id} for course ${req.body.movie_id}` );
+            res.status(400).send(`Bad request: Movie already exists with name ${movie_id} for course ${req.body.movie_id}`);
             return;
         } 
          // Create the new Challenge object
         let newMovie = {
-            movie_id: req.body.id,
+            movie_id: req.body.movie_id,
         }
 
          // Insert into the database
