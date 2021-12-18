@@ -97,7 +97,6 @@ app.post('/movies', async (req, res) => {
          // Create the new Challenge object
         let newMovie = {
             movie_id: req.body.movieId,
-            poster_path: req.body.moviePoster
         }
 
          // Insert into the database
