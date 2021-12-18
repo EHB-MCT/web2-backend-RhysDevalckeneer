@@ -91,12 +91,12 @@ app.post('/movie', async (req, res) => {
          // Validation for double challenges
         const movie = await collection.findOne({movie_id: req.body.movie_id });
         if(movie){
-            res.status(400).send(`Bad request: Challenge already exists with name ${req.body.title_name} for course ${req.body.movie_id}` );
+            res.status(400).send(`Bad request: Movie already exists with name ${movie_id} for course ${req.body.movie_id}` );
             return;
         } 
          // Create the new Challenge object
         let newMovie = {
-            movie_id: movieId,
+            movie_id: movie,
             poster_path: moviePoster
         }
         // Add the optional session field
