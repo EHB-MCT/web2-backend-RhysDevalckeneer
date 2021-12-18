@@ -81,11 +81,6 @@ app.get('/movie/:id', async (req,res) => {
 // save a challenge
 app.post('/movie', async (req, res) => {
 
-    if(!req.body.movie_id || !req.body.poster_path){
-        res.status(400).send('Bad request: missing name, course or points');
-        return;
-    }
-
     try{
          //connect to the db
         await client.connect();
@@ -94,29 +89,15 @@ app.post('/movie', async (req, res) => {
         const collection = client.db('courseproject').collection('movies');
 
          // Validation for double challenges
-        const movie = await collection.findOne({name: req.body.name });
+        const movie = await collection.findOne({movie_id: req.body.movie_id });
         if(movie){
-            res.status(400).send(`Bad request: Challenge already exists with name ${req.body.name} for course ${req.body.course}` );
+            res.status(400).send(`Bad request: Challenge already exists with name ${req.body.title_name} for course ${req.body.movie_id}` );
             return;
         } 
          // Create the new Challenge object
         let newMovie = {
-            name: req.body.name,
-            movie_id: req.body.movie_id,
-            backdrop_path: req.body.backdrop_path,
-            genres: req.body.genres,
-            imdb_id: req.body.imdb_id,
-            original_language: req.body.original_language,
-            original_title: req.body.original_title,
-            overview: req.body.overview,
-            poster_path: req.body.poster_path,
-            release_date: req.body.release_date,
-            revenue: req.body.revenue,
-            runtime: req.body.runtime,
-            tagline: req.body.tagline,
-            title: req.body.title,
-            vote_average: req.body.vote_average,
-            vote_count: req.body.vote_count,
+            movie_id: movieId,
+            poster_path: moviePoster
         }
         // Add the optional session field
         if(req.body.session){
