@@ -96,14 +96,10 @@ app.post('/movie', async (req, res) => {
         } 
          // Create the new Challenge object
         let newMovie = {
-            movie_id: movie,
-            poster_path: moviePoster
+            movie_id: req.body.movieId,
+            poster_path: req.body.moviePoster
         }
-        // Add the optional session field
-        if(req.body.session){
-            newMovie.session = req.body.session;
-        }
-        
+
          // Insert into the database
         let insertResult = await collection.insertOne(newMovie);
 
