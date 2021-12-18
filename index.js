@@ -100,6 +100,7 @@ app.post('/movies', async (req, res) => {
         let newMovie = {
             movie_id: req.body.movie_id,
             poster_path: req.body.poster_path,
+            runtime: req.body.runtime
         }
 
          // Insert into the database
