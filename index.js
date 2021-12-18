@@ -126,7 +126,7 @@ app.post('/movies', async (req, res) => {
 });
 
 // delete moves
-app.delete('/movie/:id', async (req,res) => {
+app.delete('/movies/:id', async (req,res) => {
     
     if(!req.params.id){
         res.status(400).send({
