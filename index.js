@@ -113,8 +113,10 @@ app.post('/movies', async (req, res) => {
         res.status(500).send({
             error: 'Something went wrong',
             value: error,
+            
             test: 'this is where it happens'
         });
+        console.log(error.message);
     }finally {
         await client.close();
     }
