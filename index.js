@@ -84,9 +84,11 @@ app.post('/movies', async (req, res) => {
     try{
          //connect to the db
         await client.connect();
+        console.log('db connected!');
 
          //retrieve the challenges collection data
         const collection = client.db('courseproject').collection('movies');
+        console.log(collection)
 
          // Validation for double challenges
         const movie = await collection.findOne({movie_id: req.body.movie_id });
