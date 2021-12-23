@@ -51,16 +51,6 @@ Backend for the courseproject MovieTime by Rhys Devalckeneer
 ## Frontend
 Frontend can be found [here](https://github.com/EHB-MCT/web2-frontend-RhysDevalckeneer).  
 
-## FAQ
-
-#### Question 1
-
-Answer 1
-
-#### Question 2
-
-Answer 2
-
 ## Rhysources
 [https://gitmoji.dev/](https://gitmoji.dev/)   
 [https://readme.so](https://readme.so)   
