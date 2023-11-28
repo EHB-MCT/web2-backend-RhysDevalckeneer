@@ -11,7 +11,6 @@ const port = process.env.PORT || 1337;
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
-// "Pyp, open the f*cking gate!" - https://www.youtube.com/watch?v=u5sRJqpRpsU
 app.use(cors());
 
 
